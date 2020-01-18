@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Physcolider : MonoBehaviour
 {
@@ -10,19 +11,23 @@ public class Physcolider : MonoBehaviour
 
     private Rigidbody _body;
 
+    private GameObject _oofObject;
+
     // Start is called before the first frame update
     void Start()
     {
+
         _body = this.GetComponentInParent<Rigidbody>();
-        Debug.Log("collider init.");
+        //Debug.Log("collider init.");
+        //Scene scene = SceneManager.GetActiveScene();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.tag == "Player")
         {
-            Debug.Log("Player hit!!");
-            if (currentSpeed > 3)
+            Debug.Log("Player hit!! " + currentSpeed.ToString("#.###"));
+            if (currentSpeed > 7)
             {
                 collisionSpeed = currentSpeed;
                 bumped = true;
@@ -48,7 +53,7 @@ public class Physcolider : MonoBehaviour
         {
             //health -= collisionSpeed - currentSpeed;
             Debug.Log("Player Pumped!!");
-
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
             bumped = false;
         }
     }
