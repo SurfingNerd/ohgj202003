@@ -20,6 +20,7 @@ public class Physcolider : MonoBehaviour
         _body = this.GetComponentInParent<Rigidbody>();
         //Debug.Log("collider init.");
         //Scene scene = SceneManager.GetActiveScene();
+        //Physics.gravity = Vector3.zero;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -27,15 +28,11 @@ public class Physcolider : MonoBehaviour
         if (collision.collider.gameObject.tag == "Player")
         {
             Debug.Log("Player hit!! " + currentSpeed.ToString("#.###"));
-            if (currentSpeed > 7)
+            if (currentSpeed > 5)
             {
                 collisionSpeed = currentSpeed;
                 bumped = true;
             }
-        }
-        else
-        {
-            Debug.Log("Hit something else " + collision.collider.gameObject.tag);
         }
     }
 
