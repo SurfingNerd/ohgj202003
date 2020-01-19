@@ -47,11 +47,9 @@ public class StartupDelay : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Reactivating Gravity");
+            //Debug.LogError("Reactivating Gravity");
 
             var character =  GameObject.FindWithTag("Player").GetComponent< UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_JumpPower = 7;
-
-
             Physics.gravity = Vector3.down * 9.8f;
             Destroy(this);
         }
