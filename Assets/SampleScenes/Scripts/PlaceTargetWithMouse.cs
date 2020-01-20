@@ -22,6 +22,11 @@ namespace UnityStandardAssets.SceneUtils
             {
                 return;
             }
+            if(!hit.transform.CompareTag("Floor"))
+            {
+                return;
+            }
+
             transform.position = hit.point + hit.normal*surfaceOffset;
             if (setTargetOn != null)
             {
