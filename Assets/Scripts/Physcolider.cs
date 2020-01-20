@@ -28,7 +28,7 @@ public class Physcolider : MonoBehaviour
         if (collision.collider.gameObject.tag == "Player")
         {
             Debug.Log("Player hit!! " + currentSpeed.ToString("#.###"));
-            if (currentSpeed > 5)
+            if (currentSpeed > 6)
             {
                 collisionSpeed = currentSpeed;
                 bumped = true;
