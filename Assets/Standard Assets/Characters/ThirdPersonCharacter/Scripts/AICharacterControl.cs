@@ -25,6 +25,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+
             if (target != null)
                 agent.SetDestination(target.position);
 
@@ -32,6 +33,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 character.Move(agent.desiredVelocity, false, false);
             else
                 character.Move(Vector3.zero, false, false);
+                
+            // if (target != null)
+            // {
+            //     agent.enabled = true;
+            //     agent.SetDestination(target.position);
+                
+            //     if (agent.remainingDistance > agent.stoppingDistance)
+            //         character.Move(agent.desiredVelocity, false, false);
+            //     else
+            //     {
+            //         character.Move(Vector3.zero, false, false);
+            //         this.target = null;
+            //         //agent.enabled = false;
+                    
+            //     }
+            // }
         }
 
 
