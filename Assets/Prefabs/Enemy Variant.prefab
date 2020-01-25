@@ -122,7 +122,12 @@ PrefabInstance:
     - target: {fileID: 2497501108481933106, guid: 904067b6c8107bf04942b0ac5eb5a95a,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497501108488548892, guid: 904067b6c8107bf04942b0ac5eb5a95a,
+        type: 3}
+      propertyPath: m_GroundCheckDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904067b6c8107bf04942b0ac5eb5a95a, type: 3}
