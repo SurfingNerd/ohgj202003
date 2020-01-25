@@ -1,2 +1,2 @@
-# ohgj202003
-OneHourGameJam 03 in 2020. My first one HourGameJam https://onehourgamejam.com/
+# ohgj248
+OneHourGameJam nr 248. https://onehourgamejam.com/
